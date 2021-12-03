@@ -182,9 +182,7 @@ $(document).ready(function() {
     var top = new Layer(); // new Layer() will be automatically activated at the moment.
 
     //networking - socket.io
-    //var socket = io('http://192.168.42.20:8080');
-    //var socket = io('http://choir.run:8080');
-    var socket = io('https://choir.run');
+    var socket = io(window.location.protocol + "//" + window.location.host);
 
     //net. connection marker
     var netstat = new Path.Circle({
